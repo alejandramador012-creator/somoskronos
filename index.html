@@ -50,7 +50,7 @@ a:hover { color: #F7E4AC; }
       </div>
       <div style="display:flex; align-items:center; gap:10px">
         <span style="width:7px; height:7px; border-radius:50%; background:#E7C670; animation:kronosPulse 2s ease-in-out infinite"></span>
-        <span style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(231,198,112,0.8)">Miércoles · 5:00 p.m. Colombia</span>
+        <span style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(231,198,112,0.8)">Miércoles · 5:00 p.m. Colombia · En vivo, sin grabación</span>
       </div>
     </div>
   </section>
@@ -70,10 +70,10 @@ a:hover { color: #F7E4AC; }
   <div style="overflow:hidden; border-top:1px solid rgba(231,198,112,0.16); border-bottom:1px solid rgba(231,198,112,0.16); padding:16px 0">
     <div style="display:flex; width:max-content; animation:kronosMarquee 34s linear infinite">
       <span style="display:flex; gap:44px; padding-right:44px; font-family:Telegraf, sans-serif; font-weight:800; font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(231,198,112,0.55); white-space:nowrap">
-        <span>Atraemos, no perseguimos</span><span>·</span><span>Clases en vivo</span><span>·</span><span>+80 personas</span><span>·</span><span>Eventos físicos y virtuales</span><span>·</span><span>El Efecto Kronos</span><span>·</span>
+        <span>Atraemos, no perseguimos</span><span>·</span><span>Clases en vivo</span><span>·</span><span>Sin grabación</span><span>·</span><span>+80 personas</span><span>·</span><span>Eventos físicos y virtuales</span><span>·</span><span>El Efecto Kronos</span><span>·</span>
       </span>
       <span style="display:flex; gap:44px; padding-right:44px; font-family:Telegraf, sans-serif; font-weight:800; font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(231,198,112,0.55); white-space:nowrap">
-        <span>Atraemos, no perseguimos</span><span>·</span><span>Clases en vivo</span><span>·</span><span>+80 personas</span><span>·</span><span>Eventos físicos y virtuales</span><span>·</span><span>El Efecto Kronos</span><span>·</span>
+        <span>Atraemos, no perseguimos</span><span>·</span><span>Clases en vivo</span><span>·</span><span>Sin grabación</span><span>·</span><span>+80 personas</span><span>·</span><span>Eventos físicos y virtuales</span><span>·</span><span>El Efecto Kronos</span><span>·</span>
       </span>
     </div>
   </div>
@@ -205,11 +205,12 @@ a:hover { color: #F7E4AC; }
           </div>
         </sc-for>
       </div>
-      <p style="margin:0; font-size:15px; font-weight:300; color:rgba(242,239,233,0.7); max-width:30em; text-wrap:pretty">Masterclass virtual en vivo, exclusiva y sin grabación. Todos los miércoles a las 5:00 p.m. hora Colombia.</p>
+      <p style="margin:0; font-size:15px; font-weight:300; color:rgba(242,239,233,0.7); max-width:30em; text-wrap:pretty">Masterclass virtual en vivo, exclusiva y sin grabación: un espacio único cada semana que no se repite. Todos los miércoles a las 5:00 p.m. hora Colombia — si no estás en vivo, no hay forma de recuperarla.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
         <a href="{{ zoomUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 38px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 22px 62px rgba(231,198,112,0.45)">Conéctate al próximo Zoom</a>
         <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-size:15px; font-weight:500; color:#F2EFE9; border:1px solid rgba(231,198,112,0.4); padding:19px 32px; border-radius:999px; transition:border-color .3s ease, color .3s ease" style-hover="border-color:#E7C670; color:#F7E4AC">Grupo de WhatsApp</a>
       </div>
+      <p style="margin:0; font-size:12px; font-weight:300; letter-spacing:0.02em; color:rgba(242,239,233,0.5); max-width:26em; text-wrap:pretty">En el grupo de WhatsApp encuentras el acceso a cada Zoom y las invitaciones a los eventos presenciales.</p>
     </div>
   </section>
 
@@ -297,7 +298,7 @@ class Component extends DCLogic {
       ],
       mecanica: [
         { n: "01", texto: "Clases en vivo varias veces a la semana, 100% digitales" },
-        { n: "02", texto: "Zoom exclusivo y no grabado todos los miércoles, 5:00 p.m." },
+        { n: "02", texto: "Zoom exclusivo, miércoles 5:00 p.m.: en vivo, sin grabación y no se repite" },
         { n: "03", texto: "Eventos virtuales una vez por semana" },
         { n: "04", texto: "Eventos físicos una vez al mes" }
       ],
