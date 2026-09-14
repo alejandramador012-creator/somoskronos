@@ -1,0 +1,19 @@
+# Video VSL: 317 MB, supera el límite de 100 MB por archivo de GitHub.
+# Súbelo a YouTube (no listado) / Vimeo y cambia el <video> por el embed,
+# o usa Git LFS si prefieres seguir auto-alojándolo.
+assets/vsl-somos-kronos.mov
+
+# Fotos de referencia sin usar en index.html (quedaron del diseño original)
+assets/hero-mentores.png
+assets/hero-mentores-v2.png
+assets/logo-blanco.png
+assets/logo-dorado.png
+assets/portada-logo.png
+
+# Material de origen del diseño, no se despliega en el sitio
+uploads/
+.thumbnail
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
