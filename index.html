@@ -34,13 +34,17 @@ a:hover { color: #F7E4AC; }
 @media (max-width:640px) { .grid-testimonios { grid-template-columns:1fr } .stagger { margin-top:0 !important } }
 .grid-mecanica { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(16px,2vw,22px) }
 @media (max-width:560px) { .grid-mecanica { grid-template-columns:1fr } }
+.card-mecanica { min-height:180px }
+@media (max-width:560px) { .card-mecanica { min-height:0 } }
+.hero-bg { min-height:min(88vh,880px) }
+@media (max-width:640px) { .hero-bg { min-height:min(60vh,480px) } }
 </style>
 </helmet>
 
 <div style="background:#000; font-family:Montserrat, sans-serif; overflow-x:hidden">
 
   <section data-screen-label="Hero" style="position:relative; display:flex; flex-direction:column; background:#000">
-    <div style="position:relative; width:100%; aspect-ratio:16/9; min-height:min(88vh,880px); background-image:url('assets/hero-imagen.png'); background-size:cover; background-position:center top">
+    <div class="hero-bg" style="position:relative; width:100%; aspect-ratio:16/9; background-image:url('assets/hero-imagen.png'); background-size:cover; background-position:center top">
       <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 24%, rgba(0,0,0,0) 82%, #000 100%)"></div>
     </div>
     <div style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:clamp(22px,2.8vh,32px); padding:clamp(4px,1vh,16px) clamp(20px,5vw,80px) clamp(64px,8vh,110px); text-align:center; background:#000">
@@ -159,7 +163,7 @@ a:hover { color: #F7E4AC; }
       </div>
       <div class="grid-mecanica">
         <sc-for list="{{ mecanica }}" as="item" hint-placeholder-count="4">
-          <div data-reveal="1" style="border:1px solid rgba(231,198,112,0.2); border-radius:20px; padding:clamp(26px,3.5vh,38px) clamp(22px,2.5vw,30px); display:flex; flex-direction:column; gap:clamp(20px,3vh,32px); min-height:180px; background:linear-gradient(165deg, rgba(231,198,112,0.06), rgba(0,0,0,0)); transition:border-color .35s ease, transform .35s ease" style-hover="border-color:rgba(231,198,112,0.55); transform:translateY(-5px)">
+          <div data-reveal="1" class="card-mecanica" style="border:1px solid rgba(231,198,112,0.2); border-radius:20px; padding:clamp(26px,3.5vh,38px) clamp(22px,2.5vw,30px); display:flex; flex-direction:column; gap:clamp(20px,3vh,32px); background:linear-gradient(165deg, rgba(231,198,112,0.06), rgba(0,0,0,0)); transition:border-color .35s ease, transform .35s ease" style-hover="border-color:rgba(231,198,112,0.55); transform:translateY(-5px)">
             <span style="font-family:Telegraf, sans-serif; font-weight:800; font-size:12px; letter-spacing:0.16em; color:rgba(231,198,112,0.75)">{{ item.n }}</span>
             <p style="margin:0; font-size:16px; font-weight:400; line-height:1.6; color:#F2EFE9; text-wrap:pretty">{{ item.texto }}</p>
           </div>
