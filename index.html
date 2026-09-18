@@ -50,7 +50,7 @@ a:hover { color: #F7E4AC; }
       </div>
       <div style="display:flex; align-items:center; gap:10px">
         <span style="width:7px; height:7px; border-radius:50%; background:#E7C670; animation:kronosPulse 2s ease-in-out infinite"></span>
-        <span style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(231,198,112,0.8)">Miércoles · 5:00 p.m. Colombia · En vivo, sin grabación</span>
+        <span style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(231,198,112,0.8)">Miércoles · 8:00 p.m. Colombia · En vivo, sin grabación</span>
       </div>
     </div>
   </section>
@@ -205,11 +205,12 @@ a:hover { color: #F7E4AC; }
           </div>
         </sc-for>
       </div>
-      <p style="margin:0; font-size:15px; font-weight:300; color:rgba(242,239,233,0.7); max-width:30em; text-wrap:pretty">Masterclass virtual en vivo, exclusiva y sin grabación: un espacio único cada semana que no se repite. Todos los miércoles a las 5:00 p.m. hora Colombia — si no estás en vivo, no hay forma de recuperarla.</p>
+      <p style="margin:0; font-size:15px; font-weight:300; color:rgba(242,239,233,0.7); max-width:30em; text-wrap:pretty">Masterclass virtual en vivo, exclusiva y sin grabación: un espacio único cada semana que no se repite. Todos los miércoles a las 8:00 p.m. hora Colombia — si no estás en vivo, no hay forma de recuperarla.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
         <a href="{{ zoomUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 38px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 22px 62px rgba(231,198,112,0.45)">Conéctate al próximo Zoom</a>
         <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-size:15px; font-weight:500; color:#F2EFE9; border:1px solid rgba(231,198,112,0.4); padding:19px 32px; border-radius:999px; transition:border-color .3s ease, color .3s ease" style-hover="border-color:#E7C670; color:#F7E4AC">Grupo de WhatsApp</a>
       </div>
+      <p style="margin:0; font-size:12px; font-weight:300; letter-spacing:0.06em; color:rgba(242,239,233,0.5); text-align:center">ID de reunión: 861 0861 3679 · Código de acceso: LIBERTAD</p>
       <p style="margin:0; font-size:12px; font-weight:300; letter-spacing:0.02em; color:rgba(242,239,233,0.5); max-width:26em; text-wrap:pretty">En el grupo de WhatsApp encuentras el acceso a cada Zoom y las invitaciones a los eventos presenciales.</p>
     </div>
   </section>
@@ -269,8 +270,9 @@ class Component extends DCLogic {
 
   nextTargetMs() {
     const now = new Date(this.state.now);
-    let d = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 22, 0, 0);
-    d += ((3 - new Date(d).getUTCDay() + 7) % 7) * 86400000;
+    // 8:00 p.m. Colombia (UTC-5) = 01:00 UTC del jueves siguiente (miércoles 20:00 COT + 5h)
+    let d = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 1, 0, 0);
+    d += ((4 - new Date(d).getUTCDay() + 7) % 7) * 86400000;
     if (d <= this.state.now) d += 7 * 86400000;
     return d;
   }
@@ -282,8 +284,8 @@ class Component extends DCLogic {
     const s = Math.floor(diff / 1000);
     const pad = (n) => String(n).padStart(2, "0");
     return {
-      zoomUrl: this.props.zoomUrl ?? "#comunidad",
-      whatsappUrl: this.props.whatsappUrl ?? "#comunidad",
+      zoomUrl: "https://us05web.zoom.us/j/86108613679?pwd=glkiUlxaIGpbagkev7xBNcOZlW5lKf.1",
+      whatsappUrl: "https://chat.whatsapp.com/JT7QUKlEwtuFvXwVrlwfRQ?s=sw&p=i&mlu=4&ilr=4",
       contadorLabel: live ? "Estamos en vivo ahora mismo" : "Próxima masterclass en vivo",
       cuenta: [
         { valor: pad(Math.floor(s / 86400)), etiqueta: "Días" },
@@ -298,7 +300,7 @@ class Component extends DCLogic {
       ],
       mecanica: [
         { n: "01", texto: "Clases en vivo varias veces a la semana, 100% digitales" },
-        { n: "02", texto: "Zoom exclusivo, miércoles 5:00 p.m.: en vivo, sin grabación y no se repite" },
+        { n: "02", texto: "Zoom exclusivo, miércoles 8:00 p.m.: en vivo, sin grabación y no se repite" },
         { n: "03", texto: "Eventos virtuales una vez por semana" },
         { n: "04", texto: "Eventos físicos una vez al mes" }
       ],
