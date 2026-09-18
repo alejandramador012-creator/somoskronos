@@ -1,0 +1,19 @@
+# Video VSL original (317 MB): el sitio ya usa el embed de YouTube,
+# este archivo no se necesita para nada. Se deja fuera del repo.
+assets/vsl-somos-kronos.mov
+
+# Fotos de referencia sin usar en index.html (quedaron del diseño original)
+assets/hero-mentores.png
+assets/hero-mentores-v2.png
+assets/logo-blanco.png
+assets/logo-dorado.png
+assets/portada-logo.png
+assets/foto-video.jpeg
+
+# Material de origen del diseño, no se despliega en el sitio
+uploads/
+.thumbnail
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
