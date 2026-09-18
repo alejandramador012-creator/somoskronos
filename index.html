@@ -37,7 +37,8 @@ a:hover { color: #F7E4AC; }
 .card-mecanica { min-height:180px }
 @media (max-width:560px) { .card-mecanica { min-height:0 } }
 .hero-bg { min-height:min(88vh,880px) }
-@media (max-width:640px) { .hero-bg { min-height:min(60vh,480px) } }
+@media (max-width:640px) { .hero-bg { min-height:0 } }
+@media (max-width:640px) { .iceberg-bg { min-height:min(34vh,280px) } }
 </style>
 </helmet>
 
@@ -145,7 +146,7 @@ a:hover { color: #F7E4AC; }
       <h2 style="margin:0; font-family:Telegraf, serif; font-weight:800; font-size:clamp(32px,4.2vw,62px); line-height:1.03; letter-spacing:-0.025em; color:#F2EFE9; text-wrap:balance">Lo que ves. Y lo que realmente lo sostiene.</h2>
       <p style="margin:0; font-size:16px; font-weight:300; line-height:1.8; color:rgba(242,239,233,0.68)">Nadie construye libertad de la noche a la mañana. Esto es lo que hay debajo.</p>
     </div>
-    <div style="position:relative; width:100%; aspect-ratio:16/9; background-image:url('assets/iceberg.png'); background-size:cover; background-position:center">
+    <div class="iceberg-bg" style="position:relative; width:100%; aspect-ratio:16/9; background-image:url('assets/iceberg.png'); background-size:cover; background-position:center">
       <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0) 84%, #000 100%)"></div>
     </div>
     <div data-reveal="1" style="padding:clamp(56px,8vh,96px) clamp(20px,6vw,110px) clamp(96px,13vh,160px); display:flex; flex-direction:column; gap:clamp(30px,4vh,48px); align-items:flex-start">
