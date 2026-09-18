@@ -32,6 +32,8 @@ a:hover { color: #F7E4AC; }
 @media (max-width:860px) { .grid-mentores { grid-template-columns:1fr } }
 .grid-testimonios { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(20px,3vw,40px) }
 @media (max-width:640px) { .grid-testimonios { grid-template-columns:1fr } .stagger { margin-top:0 !important } }
+.grid-mecanica { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(16px,2vw,22px) }
+@media (max-width:560px) { .grid-mecanica { grid-template-columns:1fr } }
 </style>
 </helmet>
 
@@ -45,8 +47,8 @@ a:hover { color: #F7E4AC; }
       <h1 style="font-family:Telegraf, serif; font-weight:800; font-size:clamp(36px,5.6vw,80px); line-height:1.0; letter-spacing:-0.03em; margin:0; max-width:15em; background:linear-gradient(100deg,#F7E9BE 0%,#E7C670 42%,#B98B2B 100%); -webkit-background-clip:text; background-clip:text; color:transparent">Bienvenido al<br />Efecto Kronos</h1>
       <p style="margin:0; font-size:clamp(15px,1.25vw,18px); font-weight:300; line-height:1.7; color:rgba(242,239,233,0.72); max-width:30em; text-wrap:pretty">Una comunidad de networkers conscientes. Clases en vivo, acompañamiento real y un sistema que ya funciona.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
-        <a href="{{ zoomUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 36px; border-radius:999px; box-shadow:0 16px 46px rgba(199,151,50,0.3); transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 22px 62px rgba(231,198,112,0.45)">Conéctate al próximo Zoom</a>
-        <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-size:15px; font-weight:500; color:#F2EFE9; border:1px solid rgba(231,198,112,0.4); padding:19px 32px; border-radius:999px; transition:border-color .3s ease, color .3s ease" style-hover="border-color:#E7C670; color:#F7E4AC">Grupo de WhatsApp</a>
+        <a href="{{ zoomUrl }}" target="_blank" rel="noopener" style="display:inline-flex; text-align:center; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 36px; border-radius:999px; box-shadow:0 16px 46px rgba(199,151,50,0.3); transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 22px 62px rgba(231,198,112,0.45)">Conéctate al próximo Zoom</a>
+        <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; text-align:center; font-size:15px; font-weight:500; color:#F2EFE9; border:1px solid rgba(231,198,112,0.4); padding:19px 32px; border-radius:999px; transition:border-color .3s ease, color .3s ease" style-hover="border-color:#E7C670; color:#F7E4AC">Grupo de WhatsApp</a>
       </div>
       <div style="display:flex; align-items:center; gap:10px">
         <span style="width:7px; height:7px; border-radius:50%; background:#E7C670; animation:kronosPulse 2s ease-in-out infinite"></span>
@@ -144,7 +146,7 @@ a:hover { color: #F7E4AC; }
     </div>
     <div data-reveal="1" style="padding:clamp(56px,8vh,96px) clamp(20px,6vw,110px) clamp(96px,13vh,160px); display:flex; flex-direction:column; gap:clamp(30px,4vh,48px); align-items:flex-start">
       <p style="margin:0; font-family:Telegraf, serif; font-weight:200; font-size:clamp(20px,2.4vw,34px); line-height:1.45; color:#F2EFE9; max-width:28em; text-wrap:pretty">Debajo del agua está lo que nadie te muestra: el movimiento que sostiene a quienes ya cambiaron su historia.</p>
-      <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 36px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 20px 56px rgba(231,198,112,0.42)">Quiero estar debajo del agua</a>
+      <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; text-align:center; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 36px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 20px 56px rgba(231,198,112,0.42)">Quiero estar debajo del agua</a>
     </div>
   </section>
 
@@ -155,7 +157,7 @@ a:hover { color: #F7E4AC; }
         <h2 style="margin:0; font-family:Telegraf, serif; font-weight:800; font-size:clamp(32px,4.2vw,62px); line-height:1.03; letter-spacing:-0.025em; color:#F2EFE9; text-wrap:balance">Esto no es un grupo. Es un movimiento.</h2>
         <p style="margin:0; font-size:16px; font-weight:300; line-height:1.8; color:rgba(242,239,233,0.7); max-width:26em; text-wrap:pretty">Más de dos años haciendo esto. Hoy somos más de 80 personas construyendo juntos — desde jornadas de running hasta espacios de autocuidado.</p>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(16px,2vw,22px)">
+      <div class="grid-mecanica">
         <sc-for list="{{ mecanica }}" as="item" hint-placeholder-count="4">
           <div data-reveal="1" style="border:1px solid rgba(231,198,112,0.2); border-radius:20px; padding:clamp(26px,3.5vh,38px) clamp(22px,2.5vw,30px); display:flex; flex-direction:column; gap:clamp(20px,3vh,32px); min-height:180px; background:linear-gradient(165deg, rgba(231,198,112,0.06), rgba(0,0,0,0)); transition:border-color .35s ease, transform .35s ease" style-hover="border-color:rgba(231,198,112,0.55); transform:translateY(-5px)">
             <span style="font-family:Telegraf, sans-serif; font-weight:800; font-size:12px; letter-spacing:0.16em; color:rgba(231,198,112,0.75)">{{ item.n }}</span>
@@ -187,7 +189,7 @@ a:hover { color: #F7E4AC; }
       <p style="margin:0; font-size:16px; font-weight:400; line-height:1.8; color:rgba(18,14,6,0.72); max-width:32em; text-wrap:pretty">Buscas libertad financiera, estás cansado de la teoría sin experiencia real detrás y quieres rodearte de gente que ya lo logró.</p>
       <span style="width:56px; height:1px; background:rgba(18,14,6,0.28)"></span>
       <p style="margin:0; font-family:Telegraf, sans-serif; font-weight:800; font-size:clamp(22px,2.8vw,38px); line-height:1.18; letter-spacing:-0.02em; color:#120E06; max-width:18em; text-wrap:balance">¿Estás listo para ser parte de la comunidad correcta?</p>
-      <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#F7E4AC; background:#120E06; padding:19px 38px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 20px 50px rgba(18,14,6,0.35)">Quiero entrar</a>
+      <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; text-align:center; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#F7E4AC; background:#120E06; padding:19px 38px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 20px 50px rgba(18,14,6,0.35)">Quiero entrar</a>
     </div>
   </section>
 
@@ -207,8 +209,8 @@ a:hover { color: #F7E4AC; }
       </div>
       <p style="margin:0; font-size:15px; font-weight:300; color:rgba(242,239,233,0.7); max-width:30em; text-wrap:pretty">Masterclass virtual en vivo, exclusiva y sin grabación: un espacio único cada semana que no se repite. Todos los miércoles a las 8:00 p.m. hora Colombia — si no estás en vivo, no hay forma de recuperarla.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center">
-        <a href="{{ zoomUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 38px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 22px 62px rgba(231,198,112,0.45)">Conéctate al próximo Zoom</a>
-        <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; font-size:15px; font-weight:500; color:#F2EFE9; border:1px solid rgba(231,198,112,0.4); padding:19px 32px; border-radius:999px; transition:border-color .3s ease, color .3s ease" style-hover="border-color:#E7C670; color:#F7E4AC">Grupo de WhatsApp</a>
+        <a href="{{ zoomUrl }}" target="_blank" rel="noopener" style="display:inline-flex; text-align:center; font-family:Telegraf, sans-serif; font-weight:800; font-size:16px; color:#120E06; background:linear-gradient(120deg,#F7E9BE 0%,#E7C670 45%,#C0912F 100%); padding:19px 38px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-2px); box-shadow:0 22px 62px rgba(231,198,112,0.45)">Conéctate al próximo Zoom</a>
+        <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="display:inline-flex; text-align:center; font-size:15px; font-weight:500; color:#F2EFE9; border:1px solid rgba(231,198,112,0.4); padding:19px 32px; border-radius:999px; transition:border-color .3s ease, color .3s ease" style-hover="border-color:#E7C670; color:#F7E4AC">Grupo de WhatsApp</a>
       </div>
       <p style="margin:0; font-size:12px; font-weight:300; letter-spacing:0.06em; color:rgba(242,239,233,0.5); text-align:center">ID de reunión: 861 0861 3679 · Código de acceso: LIBERTAD</p>
       <p style="margin:0; font-size:12px; font-weight:300; letter-spacing:0.02em; color:rgba(242,239,233,0.5); max-width:26em; text-wrap:pretty">En el grupo de WhatsApp encuentras el acceso a cada Zoom y las invitaciones a los eventos presenciales.</p>
