@@ -23,13 +23,6 @@ git push -u origin main
 2. Build command: (vacío/ninguno). Publish directory: `/` (la raíz).
 3. Deploy.
 
-## ⚠️ Sobre el video VSL
+## Sobre el video VSL
 
-`assets/vsl-somos-kronos.mov` pesa 317 MB y **no está incluido en este repo** (está en `.gitignore`) porque supera el límite de 100 MB por archivo de GitHub — el push fallaría si se agrega tal cual.
-
-Antes de publicar, elige una opción:
-
-- **Recomendado — hospedarlo aparte:** sube el video a YouTube (no listado) o Vimeo y avísame el link; cambio el reproductor de `index.html` por ese embed. Carga más rápido, funciona mejor en móvil y no depende del tamaño del repo.
-- **Alternativa — mantenerlo auto-alojado:** usar Git LFS (`git lfs track "*.mov"`) para subirlo igual. Ten en cuenta que GitHub LFS gratis da 1 GB de almacenamiento y 1 GB de transferencia al mes — con un solo video de 317 MB el ancho de banda se agota rápido, y Netlify necesita configuración extra (Large Media / build plugin) para servirlo bien.
-
-Sin resolver esto, el sitio publicado mostrará la sección VSL sin video.
+La sección "Mira esto primero" usa un embed de YouTube (`youtube-nocookie.com/embed/7TL6ZsWHWEM`), no un archivo de video. El `.mov` original (317 MB) sigue en `assets/` en tu máquina pero está en `.gitignore` — no se sube al repo porque ya no se necesita.
